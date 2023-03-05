@@ -91,9 +91,9 @@ lcd.setCursor(6, 0);
 lcd.print(temp);  
 }
  //Turning on that super cool motor when things get too hot!
-if (tempF>=90) {
-digitalWrite(motor,HIGH); }
+if (tempF>=80) {
+analogWrite(motor,130); }
 else {
-  digitalWrite(motor,LOW);}
-  
+  analogWrite(motor,0);}
+  delay(200);
 }
