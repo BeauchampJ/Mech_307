@@ -22,7 +22,7 @@ int tempPin=A0;
 //Defining the button which will be hit
 const int buttonPin=6;
 //Defining the motor pin
-const int motor=5;
+const int motor=3;
 //Defining the temp state 1==Fahrenheit 0==Celcius. Starts in F
 int tempState=1;
 //Starts with the button assumed unpressed
@@ -92,7 +92,7 @@ lcd.print(temp);
 }
  //Turning on that super cool motor when things get too hot!
 if (tempF>=90) {
-analogWrite(motor,100); }
+analogWrite(motor,180); }
 else {
   analogWrite(motor,0);}
   delay(200);
